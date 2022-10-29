@@ -37,6 +37,10 @@ export const useDimension = () => {
             }
         }
     }, [])
+    return {
+        w,
+        h
+    }
 }
 
 const sinify = (scale : number) : number => Math.sin(scale * Math.PI)
