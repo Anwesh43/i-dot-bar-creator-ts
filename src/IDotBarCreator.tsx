@@ -13,7 +13,7 @@ const IDotBarCreator = (props : IDBCProps) => {
     return (<Fragment>
         <div style = {barStyle()}>
         </div>
-        <div style = {dotStyle()}>
+        <div style = {dotStyle()} onClick = {() => props.onClick()}>
         </div>
     </Fragment>)
 }

@@ -65,10 +65,11 @@ export const useStyle = (w : number, h : number, scale : number) => {
             }
         },
         dotStyle() : CSSProperties {
-            const width = `${size / 5}px`
-            const height = `${size / 5}px`
-            const left = `${(w / 2 - size / 2) * sinify(scale)}px`
-            const top = `${h / 2 - size / 5}px`
+            const sizeFactor : number = 3
+            const width = `${size / sizeFactor}px`
+            const height = `${size / sizeFactor}px`
+            const left = `${(w / 2 - size / (sizeFactor * 2)) * sinify(scale)}px`
+            const top = `${h / 2 - size / sizeFactor}px`
             const position = 'absolute'
             const borderRadius = `50%`
             return {
